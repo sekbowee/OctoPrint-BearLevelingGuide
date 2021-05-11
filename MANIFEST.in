@@ -1,5 +1,5 @@
 include README.md
 include requirements.txt
-recursive-include octoprint_PrusaLevelingGuide/templates *
-recursive-include octoprint_PrusaLevelingGuide/translations *
-recursive-include octoprint_PrusaLevelingGuide/static *
+recursive-include octoprint_BearLevelingGuide/templates *
+recursive-include octoprint_BearLevelingGuide/translations *
+recursive-include octoprint_BearLevelingGuide/static *
