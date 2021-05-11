@@ -1,0 +1,19 @@
+<h2>3DXFAB BEAR Leveling Guide</h2>
+<form class="form-horizontal">
+    <h3>G-Code for mesh leveling</h3>
+    <p>
+    Specify what command to use for mesh bed leveling
+    </p>
+    <div class="control-group">
+        <label class="control-label">Mesh Leveling Script</label>
+        <div class="controls">
+            <textarea rows="4" class="block" data-bind="value: settingsViewModel.settings.plugins.BearLevelingGuide.mesh_gcode"></textarea>
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label">Move gcode <small>(gcode used to move extruder and bed out of the way between adjustments)</small></label>
+        <div class="controls">
+            <input type="text" class="block" data-bind="value: settingsViewModel.settings.plugins.BearLevelingGuide.move_gcode" />
+        </div>
+    </div>
+</form>
