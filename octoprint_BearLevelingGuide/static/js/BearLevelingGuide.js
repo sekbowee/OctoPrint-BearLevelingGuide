@@ -102,9 +102,6 @@ $(function() {
 			self.viewType("real");
 		}
 
-		self.switchToBed = function () {
-			self.viewType("bed");
-		}
 		// initialization
 		self.onStartupComplete = function () {
 
