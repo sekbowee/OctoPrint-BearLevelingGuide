@@ -24,7 +24,7 @@
 #tab_plugin_BearLevelingGuide #realView #photo_heatbed {
   background: url(../img/photo_heatbed.png);
   background-repeat: no-repeat;
-  height: 455px;
+  height: 864px;
   padding-bottom: 15px;
   background-position: center;
 }
@@ -36,38 +36,38 @@
   position: relative;
 }
 #tab_plugin_BearLevelingGuide #realView .bedvalue-0-container {
-  top: 53px;
-  left: 90px;
+  top: 105px;
+  left: 167px;
 }
 #tab_plugin_BearLevelingGuide #realView .bedvalue-1-container {
-  top: 53px;
-  left: 155px;
+  top: 105px;
+  left: 294px;
 }
 #tab_plugin_BearLevelingGuide #realView .bedvalue-2-container {
-  top: 53px;
-  left: 220px;
+  top: 105px;
+  left: 418px;
 }
 #tab_plugin_BearLevelingGuide #realView .bedvalue-3-container {
-  top: 208px;
-  left: -205px;
+  top: 420px;
+  left: -418px;
 }
 #tab_plugin_BearLevelingGuide #realView .bedvalue-4-container {
-  top: 208px;
-  left: -131px;
+  top: 420px;
+  left: -294px;
 }
 #tab_plugin_BearLevelingGuide #realView .bedvalue-5-container {
-  top: 208px;
-  left: -58px;
+  top: 420px;
+  left: -167px;
 }
 #tab_plugin_BearLevelingGuide #realView .bedvalue-6-container {
-  top: 354px;
-  left: 62px;
+  top: 680px;
+  left: 167px;
 }
 #tab_plugin_BearLevelingGuide #realView .bedvalue-7-container {
-  top: 354px;
-  left: 154px;
+  top: 680px;
+  left: 294px;
 }
 #tab_plugin_BearLevelingGuide #realView .bedvalue-8-container {
-  top: 354px;
-  left: 233px;
+  top: 680px;
+  left: 418px;
 }
