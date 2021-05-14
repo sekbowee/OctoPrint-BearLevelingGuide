@@ -54,11 +54,8 @@ You have the option of viewing the values in a table view or overlayed on a phot
 **Configuration View**
 ![Config View](config.png)
 
-**Beta Bed View**
-![Beda view](bed.png)
-
 **Bed View**
-![Bed view](bed_old.png)
+![Bed view](bed.png)
 
 **Table View**
 ![Table view](table.png)
