@@ -5,65 +5,6 @@
  * License: AGPLv3
  */
 
-
-const ICONS = {
-	center: "\uf140",
-	tighten: "\uf01e",
-	loosen: "\uf0e2"
-};
-
-const dimensions = {
-	x: 590,
-	y: 455
-};
-
-const canvasLocations = [
-	// upper left
-	{
-		x: 70,
-		y: 65
-	},
-	// upper center
-	{
-		x: 250,
-		y: 65
-	},
-	// upper right
-	{
-		x: 440,
-		y: 65
-	},
-	// middle left
-	{
-		x: 65,
-		y: 230
-	},
-	// center
-	{
-		x: 250,
-		y: 230
-	},
-	// middle right
-	{
-		x: 440,
-		y: 230
-	},
-	// bottom left
-	{
-		x: 50,
-		y: 400
-	},
-	// bottom center
-	{
-		x: 250,
-		y: 400
-	},
-	// bottom right
-	{
-		x: 440,
-		y: 400
-	}
-];
 function gcd(a, b) {
 	return (b) ? gcd(b, a % b) : a;
 }
@@ -351,39 +292,6 @@ $(function() {
 				
 				
 			}
-
-			// draw the value to the canvas
-			// trigger onload of heatbedimage to clear the canvas and repaint the image
-			self.heatbedImage.dispatchEvent(new Event('load'));
-			canvasLocations.forEach((location, i) => {
-				let valueColor = perc2color(Math.abs(data.values[i]), maxValue, 0);
-				self.ctx.beginPath();
-				self.ctx.fillStyle = "black";
-				// rectangle background
-
-				self.ctx.strokeStyle = "white";
-				self.ctx.fillRect(location.x - 5, location.y - 20, 100, 25);
-				// rectangle border
-				self.ctx.rect(location.x - 5, location.y - 20, 100, 25);
-				self.ctx.stroke();
-			
-				self.ctx.fillStyle = "white";
-				self.ctx.strokeStyle = "grey";
-				self.ctx.strokeText(newBedValues[i], location.x, location.y);
-				self.ctx.fillText(newBedValues[i], location.x, location.y);
-
-				let text = "";
-
-				if (data.values[i] == 0) {
-					text = ICONS.center;
-				}
-				else {
-					text = (data.values[i] < 0) ? ICONS.loosen : ICONS.tighten;
-				}
-				self.ctx.fillText(text, location.x + 75, location.y);
-				self.ctx.strokeStyle = valueColor;
-				self.ctx.stroke();
-			});
 			
 			self.bedValues(newBedValues);
 			var d = new Date(data.last_result * 1000);
@@ -410,7 +318,7 @@ $(function() {
 			// Send the configured gcode
 			OctoPrint.control.sendGcode(levelGcode.split("\n"));
 			
-			self.currentStatus('Waiting for mesh level to complete');
+			self.currentStatus('Waiting for Mesh Bed Leveling to complete');
 			
 			// Create a timer to check the route for updated mesh values
 			self.waitTimer = setInterval(function () {
@@ -419,7 +327,7 @@ $(function() {
 					
 					if (self.routeData().last_result != response.last_result) {
 						// If we actually have new data, we are waiting to continue adjustment
-						self.currentStatus('Results received; make adjustments now.  When ready, click continue below.');
+						self.currentStatus('Results obtained, make adjustments now.\nWhen ready, click continue below.');
 						
 						// move the extruder out of the way to make adjustments
 						OctoPrint.control.sendGcode(self.currentSettings.move_gcode());
