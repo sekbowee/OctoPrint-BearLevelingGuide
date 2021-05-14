@@ -44,8 +44,8 @@ class BearLevelingGuidePlugin(octoprint.plugin.SimpleApiPlugin,
 			enable_preheat_nozzle = False,
 			enable_preheat_bed = False,
 			selected_profile = "",
-			selected_view = "raw",
-			view_type = "table"
+			selected_view = "degrees",
+			view_type = "real"
 		)
 
 	##~~ AssetPlugin mixin
