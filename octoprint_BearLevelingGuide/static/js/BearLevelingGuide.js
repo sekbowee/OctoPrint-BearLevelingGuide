@@ -324,7 +324,7 @@ $(function() {
 					
 					if (self.routeData().last_result != response.last_result) {
 						// If we actually have new data, we are waiting to continue adjustment
-						self.currentStatus('Results obtained, make adjustments now.\nWhen ready, click continue below.');
+						self.currentStatus('Results Obtained, make adjustments now.  When ready, click continue below.');
 						
 						// move the extruder out of the way to make adjustments
 						OctoPrint.control.sendGcode(self.currentSettings.move_gcode());
