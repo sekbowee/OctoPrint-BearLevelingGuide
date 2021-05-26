@@ -17,12 +17,11 @@ or manually using this URL:
 
 ## Known Issues
 * Installation may silently fail due to missing system dependencies. **You should upgrade to OctoPi 0.18+** or SSH into your pi and run the command `sudo apt install libatlas3-base`.
-* This plugin will calculate the relative values for you and will not work with firmware modifications that change the G81 response.
 * Z Calibration can effect bed leveling. If you re-calibrate your Z-axis after leveling your bed, it might look like the whole left or right side of the bed is suddenly higer/lower than the other side. The reason for this is, that the Z-axis leadscrews might have changed their angular position relative to each other due to soft mechanical upper stops. If this is the case, try to rotate one of the leadscrews by hand by one or two clicks instead of re-adjusting the bed again.
 
 ## Preheating profiles
 
-The profiles listed for preheating are the temperature profiles defined in octoprint.  To define more, browse to Settings->Temperatures.  You can also define temperature profiles that just preheat the bed, just the nozzle, or use the default ones that preheat both.
+The profiles listed for preheating are the temperature profiles defined in octoprint.  To define more, browse to Settings -> Temperatures.  You can also define temperature profiles that just preheat the bed, just the nozzle, or use the default ones that preheat both.
 
 ![Temperature Settings](preheat.png)
 
@@ -52,15 +51,17 @@ All of the other views will disable an arrow next to the value to show which dir
 You have the option of viewing the values in a table view or overlayed on a photo of the heatbed.  You can also customize whether you view raw values, degrees, decimal turns, or factional turns.
 
 **Configuration View**
+
 ![Config View](config.png)
 
-**Beta Bed View**
-![Beda view](bed.png)
 
 **Bed View**
-![Bed view](bed_old.png)
+
+![Bed view](bed.png)
+
 
 **Table View**
+
 ![Table view](table.png)
 
 
@@ -85,7 +86,5 @@ The configuration tab allows you to customize the gcode for mesh leveling simila
 Just like the PrusaMeshMap plugin, this plugin has a handler that is watching output received from the printer **at all times**. This means you can place a G81 in octoprint's or your slicer's start or stop gcode and the plugin will update its values after every print.
 
 ## Z Calibration can effect bed leveling
-
-Note from *Spacemarine2018*
 
 If you re-calibrate your Z-axis after leveling your bed, it might look like the whole left or right side of the bed is suddenly higer/lower than the other side. The reason for this is, that the Z-axis leadscrews might have changed their angular position relative to each other due to soft mechanical upper stops. If this is the case, try to rotate one of the leadscrews by hand by one or two clicks instead of re-adjusting the bed again.
